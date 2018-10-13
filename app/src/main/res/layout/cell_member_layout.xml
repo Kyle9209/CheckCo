@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:layout_margin="1dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:gravity="center"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_Img_civ"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_account_circle_black_48dp" />
+
+        <TextView
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:text="상태"
+            android:id="@+id/state_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/dept_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="부서" />
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/position_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="직급" />
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이름" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

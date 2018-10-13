@@ -1,0 +1,214 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backGround"
+    android:orientation="vertical"
+    tools:context="com.test.www.finalproject.fragment.SettingFragment">
+
+    <include
+        layout="@layout/custom_toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 프로필 사진 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_Img_civ"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/ic_account_circle_white_48dp" />
+
+            </LinearLayout>
+
+            <!-- 프로필 버튼들 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!-- 회사명/부서/직급 -->
+                    <LinearLayout
+                        android:id="@+id/company_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <!-- 회사 탈퇴 -->
+                        <Button
+                            android:enabled="false"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:id="@+id/company_btn"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="회사명"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            tools:ignore="RtlCompat" />
+
+                        <!-- 부서 변경 -->
+                        <Button
+                            android:id="@+id/dept_btn"
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@mipmap/ic_keyboard_arrow_right_white_24dp"
+                            android:text="부서"
+                            android:textAlignment="textStart"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            tools:ignore="RtlCompat" />
+
+                        <!-- 직급 변경 -->
+                        <Button
+                            android:id="@+id/position_btn"
+                            style="@style/Widget.AppCompat.Button.Colored"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@mipmap/ic_keyboard_arrow_right_white_24dp"
+                            android:text="직급"
+                            android:textAlignment="textStart"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            tools:ignore="RtlCompat" />
+
+                    </LinearLayout>
+
+                    <!-- 이름 변경 -->
+                    <Button
+                        android:id="@+id/name_btn"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@mipmap/ic_keyboard_arrow_right_white_24dp"
+                        android:text="이름"
+                        android:textAlignment="textStart"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlCompat" />
+
+                    <!-- 전화번호 변경 -->
+                    <Button
+                        android:id="@+id/number_btn"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@mipmap/ic_keyboard_arrow_right_white_24dp"
+                        android:text="01012345678"
+                        android:textAlignment="textStart"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlCompat" />
+
+                    <!-- 비밀번호 변경 -->
+                    <Button
+                        android:id="@+id/pwd_btn"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@mipmap/ic_keyboard_arrow_right_white_24dp"
+                        android:text="비밀번호 변경"
+                        android:textAlignment="textStart"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlCompat" />
+
+                    <!-- 로그아웃 -->
+                    <Button
+                        android:id="@+id/logoutBtn"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="로그아웃"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 관리자용 -->
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/admin_line"
+                tools:visibility="visible"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 관리자용 비콘 셋팅 -->
+                <Button
+                    android:id="@+id/beaconSettingBtn"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="비콘 설정"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <!-- 관리자용 출퇴근시간 셋팅 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/inTimeBtn"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="출근시간 설정"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/outTimeBtn"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="퇴근시간 설정"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

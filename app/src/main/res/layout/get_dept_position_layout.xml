@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:padding="16dp">
+
+    <!-- 부서 -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+    <EditText
+        android:maxLines="1"
+        android:singleLine="true"
+        android:id="@+id/dept_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="부서" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- 직급 -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+    <EditText
+        android:maxLines="1"
+        android:singleLine="true"
+        android:id="@+id/position_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="직급" />
+
+    </android.support.design.widget.TextInputLayout>
+
+</LinearLayout>
